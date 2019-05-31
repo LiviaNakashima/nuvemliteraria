@@ -20,12 +20,72 @@
                 <div class="menuitem"><a class="menulink" href="Entrar.html">Entrar</a></div>
             </div>
         
-            <form id="formulario">
+            <form id="form_login" method="post" onsubmit="return entrar()">
                 <fieldset>
                     <h2>Login</h2>
-                    <input type="text" name="primeiro" placeholder="Digite email" required> <br>
-                    <input type="text" id="senha" placeholder="Digite sua senha" required><br>
-                    <input type="submit" name="next" class="acao" value="Cadastrar">
+                    <input type="text" name="login" placeholder="Digite email" required> <br>
+                    <input type="password" name="senha" placeholder="Digite sua senha" required><br>
+                    <button id="btn_entrar" class="acao">Entrar</button>
+                        
+                   
                 </fieldset>
+                <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
+                    Usuário e/ou senha inválidos!
+                </div>
+            </form>
+            <img src="aguarde.gif" id="img_aguarde" style="display: none;">
+    
+  
+
 </body>
 </html>
+
+<script>
+
+    verificarAutenticacao();
+
+    function verificarAutenticacao() {
+        if (sessionStorage.usuario_bandtec != undefined) {
+            window.location.href = 'Index.html';
+        }
+    }
+
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/entrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                response.json().then(function (resposta) {
+
+                    sessionStorage.usuario_bandtec = resposta.nome;
+                    verificarAutenticacao();
+
+                });
+            } else {
+
+                console.log('Erro de login!');
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display='block';
+        div_erro.style.display='none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display='none';
+        div_erro.style.display='block';
+    }
+
+</script>

@@ -263,14 +263,14 @@ body {
     font-family: "Throw My Hands Up In The Air Bold";
 }
 
-#formulario {
+#form_login {
     width: 500px;
     margin: 40px auto;
     text-align: center;
     position: relative;
 }
 
-#formulario h2 {
+#form_login h2 {
     font: 22px "Throw My Hands Up In The Air Bold";
     color: black;
     width: 100%;
@@ -279,7 +279,7 @@ body {
     margin-bottom: 4%;
 }
 
-#formulario fieldset {
+#form_login fieldset {
     background: white;
     border: 0 none;
     border-radius: 1px;
@@ -293,12 +293,12 @@ body {
     position: relative;
 }
 
-#formulario fieldset:not(:first-of-type) {
+#form_login fieldset:not(:first-of-type) {
     display: none;
 }
 
-#formulario input,
-#formulario textarea {
+#form_login input,
+#form_login textarea {
     padding: 10px;
     border: 1px solid #5FCABA;
     border-radius: 5px;
@@ -311,7 +311,7 @@ body {
     margin-bottom: 10px;
 }
 
-#formulario .acao {
+#form_login .acao {
     width: 100px;
     background: #5FCABA;
     color: white;
@@ -322,19 +322,19 @@ body {
     margin-right: 5%;
 }
 
-#formulario .acao:hover {
+#form_login .acao:hover {
     background: #8CCDC5;
     border: 1px solid #8CCDC5;
     cursor: pointer;
 }
 
-#formulario #progress {
+#form_login #progress {
     margin-bottom: 30px;
     overflow: hidden;
     counter-reset: step;
 }
 
-#formulario #progress li {
+#form_login #progress li {
     list-style-type: none;
     color: black;
     font-weight: bold;
@@ -345,7 +345,7 @@ body {
     position: relative;
 }
 
-#formulario #progress li:before {
+#form_login #progress li:before {
     content: counter(step);
     counter-increment: step;
     width: 20px;
@@ -359,7 +359,7 @@ body {
     margin: 0 auto 10px auto;
 }
 
-#formulario #progress li:after {
+#form_login #progress li:after {
     content: '';
     width: 100%;
     background: white;
@@ -370,12 +370,12 @@ body {
     z-index: -1;
 }
 
-#formulario #progress li:first-child:after {
+#form_login #progress li:first-child:after {
     content: none;
 }
 
-#formulario #progress li.active:before,
-#formulario #progress li.active:after {
+#form_login #progress li.active:before,
+#form_login #progress li.active:after {
     background: #8CCDC5;
     color: white;
     text-shadow: 0 1px 0;

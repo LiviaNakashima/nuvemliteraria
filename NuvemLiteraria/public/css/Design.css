@@ -1,0 +1,383 @@
+body
+{
+    margin:0px;
+    background-color: #D5FDF5;
+}
+
+
+a
+{
+    color:black;
+    text-decoration: none;
+}
+
+
+.logo
+{
+    background-color: #8CCDC5;
+    text-align: center;
+    font-size: 52px;
+    font-family: "KG Eyes Open";
+    padding: 0px 10px 0px 0px;
+            
+}
+
+
+.menu
+{
+    background-color: #8CCDC5;
+    display: flex;
+    border: 1.5px solid #8CCDC5;
+    font-family: serif;
+    font-size: 17px;
+    /* box-shadow: 0px 2px 15px black; */
+}
+
+
+.menuitem
+{
+    background-color: #8CCDC5;   
+    height: 30px;
+    width: 20px;
+    text-align: center;
+    flex: 1;
+    margin-right:10px;
+    margin-left:10px;
+    border-radius: 2px;
+    border: 1px solid #8CCDC5;
+    font-family: "Throw My Hands Up In The Air";
+    font-size: 24px;
+    -webkit-transition: background-color 0.3s linear;    
+}
+.menuitem:hover
+{
+    background-color: #5FCABA;
+    cursor:pointer;   
+}
+
+
+.menulink
+{
+    text-decoration: none;
+    color: white;
+}
+
+
+.Slidy
+{
+    font-family: "Throw My Hands Up In The Air";
+    font-size: 40px;
+    text-align: center;    
+    height: 305px;
+    width: 540px;
+    margin:auto;
+    margin-top: 28px;
+    margin-bottom: 25px;
+    border:2px solid black;
+    box-shadow: 0px 10px 15px black;
+    background-color: darkslategray;
+    -webkit-transition: transform 0.6s linear;
+}
+.Slidy:hover
+{
+    cursor:pointer;
+    transform: scale(1.1,1.1);  
+}
+
+
+.titulo
+{
+    font-family: "Throw My Hands Up In The Air Bold";
+    font-size: 70px;
+    text-align: center;
+    padding: 10px 10px 25px;
+}
+
+
+.titulo2
+{
+    font-family: "Throw My Hands Up In The Air Bold";
+    font-size: 50px;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration:inherit;
+    color:black;
+}
+
+
+.titulo3
+{
+    font-size: 24px;
+    font-family: "Throw My Hands Up In The Air";
+    width: 730px;
+    height: 410px;
+    border: 1px solid;
+    background-color:darkgray;
+    margin: 12px; 
+    border-radius: 4px;
+    border: 2px solid darkslategray; 
+    box-shadow:2px 2px 2px black;           
+    text-align: center;
+}
+
+
+.titulo4
+{
+    font-size: 22px;
+    font-family: serif;
+    width: 600px;
+    height: 310px;
+    border: 1px solid;
+    background-color:darkgray;
+    margin: 12px; 
+    border-radius: 10px;
+    border: 2px solid darkslategray; 
+    text-align: center;
+}
+
+
+.conteinerprodutos2 
+{
+    background-image: url("solid-dark-green-wallpaper-3.jpg");
+}
+
+
+.conteinerprodutos
+{
+    display:flex;
+    flex-wrap:wrap;       
+    justify-content: space-around;
+}
+
+
+.caixaproduto 
+{
+    width: 220px;
+    height: 200px;
+    border: 1px solid;
+    margin-right: 50px;
+    margin-bottom: 70px;
+    margin-left: 24px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px black;
+    border: 2px solid black;
+}
+
+
+.nome
+{
+    width: 220px;
+    height: 30px;
+    background-color:white;
+    margin-top: 4px;       
+    border-radius: 0px 8px 0px 8px;
+    box-shadow: 2px 2px 2px black;
+    border: 2px solid black; 
+    font-family: sans-serif;
+    font-size: 26px;
+    color: black;
+    text-align: center;
+}
+.nome:hover
+{
+    cursor: pointer;
+}
+
+
+.rodape
+{
+    background-color: #8CCDC5;
+    text-align: center;
+    font-family: "Throw My Hands Up In The Air Bold";
+    font-size: 22px;
+    color: black;
+}
+
+
+.comprar
+{
+    width: 240px;
+    height: 66px;
+    border: 1px solid;
+    background-image: url("aqua-glass.jpg");
+    margin: 12px 2px 2px; 
+    border-radius: 4px;
+    border: 2px solid darkslategray; 
+    text-align:center;
+    padding: 0px 0px 0px 0px;    
+    font-family:"AgencyFB";
+    font-size:54px;
+    color: bold white;
+    box-shadow: 2px 2px 2px black;
+    -webkit-transition: background-image 0.5s linear;
+    transition: transform 0.3s linear;
+    text-transform: uppercase;
+}
+.comprar:hover
+{
+    background-image: url("aqua-glass3.jpg");
+    cursor:pointer;
+}
+.comprar:active
+{
+    background-image: url("aqua-glass.jpg");
+    transform:translate(2px,2px);
+    transform:scale(0.9,0.9);
+}
+
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.05);
+}
+         
+
+@font-face {
+    font-family: "Throw My Hands Up In The Air";
+    src: url('fonts/ThrowMyHandsUpintheAir.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Throw My Hands Up In The Air Bold";
+    src: url('fonts/ThrowMyHandsUpintheAirBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "KG Eyes Open";
+    src: url('fonts/KGEyesWideOpen.ttf') format('truetype');
+}
+
+/* Seção Cadastro */
+
+body {
+    font-family: "Throw My Hands Up In The Air Bold";
+}
+
+#formulario {
+    width: 500px;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+}
+
+#formulario h2 {
+    font: 22px "Throw My Hands Up In The Air Bold";
+    color: black;
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin-bottom: 4%;
+}
+
+#formulario fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 1px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    position: relative;
+}
+
+#formulario fieldset:not(:first-of-type) {
+    display: none;
+}
+
+#formulario input,
+#formulario textarea {
+    padding: 10px;
+    border: 1px solid #5FCABA;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    font: 14px "Throw My Hands Up In The Air Bold";
+    margin-bottom: 10px;
+}
+
+#formulario .acao {
+    width: 100px;
+    background: #5FCABA;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 12px 0;
+    float: left;
+    margin-right: 5%;
+}
+
+#formulario .acao:hover {
+    background: #8CCDC5;
+    border: 1px solid #8CCDC5;
+    cursor: pointer;
+}
+
+#formulario #progress {
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+}
+
+#formulario #progress li {
+    list-style-type: none;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10px;
+    float: left;
+    width: 33.33%;
+    position: relative;
+}
+
+#formulario #progress li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    display: block;
+    line-height: 20px;
+    background: white;
+    color: #000000;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    margin: 0 auto 10px auto;
+}
+
+#formulario #progress li:after {
+    content: '';
+    width: 100%;
+    background: white;
+    height: 2px;
+    position: absolute;
+    top: 9px;
+    left: -50%;
+    z-index: -1;
+}
+
+#formulario #progress li:first-child:after {
+    content: none;
+}
+
+#formulario #progress li.active:before,
+#formulario #progress li.active:after {
+    background: #8CCDC5;
+    color: white;
+    text-shadow: 0 1px 0;
+}
+

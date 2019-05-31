@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/Design.css" type="text/css">
+    <title>Cadastro</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+</head>
+<body>
+    <div class="logo">
+        <img src="images/favicon.png" height="54px" width="56px"><a href="Index.html">Nuvem Literária</a><img src="images/favicon.png" height="54px" width="56px">
+    </div>
+
+    <div class="menu">
+        <div class="menuitem"><a class="menulink" href="Index.html">Início</a></div>
+        <div class="menuitem"><a class="menulink" href="Resenhas.html">Resenhas</a></div>
+        <div class="menuitem"><a class="menulink" href="Cadastro.html">Cadastro</a></div>
+        <div class="menuitem"><a class="menulink" href="Entrar.html">Entrar</a></div>
+    </div>
+
+    <form id="formulario">
+        <ul id="progress">
+            <li class="active">Dados pessoais</li>
+            <li>Dados para acesso</li>
+            <li>Dados do livro</li>
+        </ul>
+        <fieldset>
+            <h2>Dados pessoais</h2>
+            <input type="text" name="nomec" placeholder="Digite seu nome completo" required> <br>
+            <input type="text" name="telefone" class="form-control phone-ddd-mask" placeholder="Digite seu telefone" required>
+            <input type="date" name="data_nasc" placeholder="Digite sua data de nascimento" required><br>
+            <input type="button" name="next" class="next acao" value="Próximo">
+        </fieldset>
+
+        <fieldset>
+            <h2>Dados para acesso</h2>
+            <input type="text" name="email" placeholder="Digite seu email" required> <br>
+            <input type="text" name="cemail" placeholder="Confirme seu email" required> <br>
+            <input type="password" name="senha" placeholder="Digite sua senha" required> <br>
+            <input type="password" name="csenha" placeholder="Confirme sua senha" required> <br>
+            <input type="button" name="prev" class="prev acao" value="Anterior">
+            <input type="button" name="next" class="next acao" value="Próximo">
+        </fieldset>
+
+        <fieldset>
+            <h2>Dados do livro</h2>
+            <input type="text" name="livro" placeholder="Digite o nome do livro" required>
+            <input type="text" name="autor" placeholder="Digite o nome do autor" required>
+            <input type="text" name="editora" placeholder="Digite o nome da editora">
+            <input type="text" name="genero" placeholder="Digite o gênero do livro"><br>
+            <input type="button" name="prev" class="prev acao" value="Anterior">
+            <input type="submit" name="next" class="acao" value="Cadastrar">
+        </fieldset>
+
+        </form>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+
+</body>
+
+</html>

@@ -20,20 +20,22 @@
                 <div class="menuitem"><a class="menulink" href="Entrar.html">Entrar</a></div>
             </div>
         
-            <form id="form_login" method="post" onsubmit="return entrar()">
+            <form id="form_register" method="post" onsubmit="return entrar()">
                 <fieldset>
                     <h2>Login</h2>
                     <input type="text" name="login" placeholder="Digite email" required> <br>
                     <input type="password" name="senha" placeholder="Digite sua senha" required><br>
                     <button id="btn_entrar" class="acao">Entrar</button>
+                    <img src="images/aguarde.gif" id="img_aguarde" style="display: none;" width="50px">
+                    <div id="div_erro" style="display: none;">
+                            Usuário e/ou senha inválidos!
+                        </div>
                         
                    
                 </fieldset>
-                <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
-                    Usuário e/ou senha inválidos!
-                </div>
+
             </form>
-            <img src="aguarde.gif" id="img_aguarde" style="display: none;">
+            
     
   
 
@@ -41,8 +43,6 @@
 </html>
 
 <script>
-
-    verificarAutenticacao();
 
     function verificarAutenticacao() {
         if (sessionStorage.usuario_bandtec != undefined) {
@@ -52,7 +52,7 @@
 
     function entrar() {
         aguardar();
-        var formulario = new URLSearchParams(new FormData(form_login));
+        var formulario = new URLSearchParams(new FormData(form_register));
         fetch("/usuarios/entrar", {
             method: "POST",
             body: formulario
@@ -63,8 +63,8 @@
                 response.json().then(function (resposta) {
 
                     sessionStorage.usuario_bandtec = resposta.nome;
-                    verificarAutenticacao();
 
+                    window.location.href = 'Index.html';
                 });
             } else {
 

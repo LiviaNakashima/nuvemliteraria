@@ -191,88 +191,16 @@ a {
 }
 @font-face {
     font-family: "Throw My Hands Up In The Air";
-    src: url('fonts/ThrowMyHandsUpintheAir.ttf') format('truetype');
+    src: url('../fonts/ThrowMyHandsUpintheAir.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "Throw My Hands Up In The Air Bold";
-    src: url('fonts/ThrowMyHandsUpintheAirBold.ttf') format('truetype');
+    src: url('../fonts/ThrowMyHandsUpintheAirBold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "KG Eyes Open";
-    src: url('fonts/KGEyesWideOpen.ttf') format('truetype');
+    src: url('../fonts/KGEyesWideOpen.ttf') format('truetype');
 }
 
-/* .linha{
-    display: inline;
-}
-.produto{
-    justify-content: space-between;
-}
-
-.grid-1 {
-    display: grid;
-    background: rgb(255, 255, 255);
-    width: 100%;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fill, minmax(40em, 1fr));
-    
-    /* grid-gap: 20px; */
-    
-  }
-  
-  /* items */
-  
-  /* .grid-1 div {
-    color: rgb(15, 15, 15);
-    font-size: 20px;
-    padding: 50px;
-  
-    }
-
-    .bg-item{
-        background-image: url('./images/Ramses.jpg');
-        background-color: #ffffff;
-        max-width: 100%;
-        height: auto;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      
-specific item styles
-
-.card{
-    margin-left: 90px;
-    margin-right: auto;
-}
-
-/* .linha{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: 15px;
-  }
-  .coluna{
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    
-  }
-  .coluna-6{
-      
-    flex: 0 0 50%;
-    max-width: 40%;
-  } */
-  
-  /* .coluna-4{
-    flex: 0 0 25%;
-    max-width: 25%;
-  }  */

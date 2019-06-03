@@ -17,8 +17,9 @@
         <div class="menuitem"><a class="menulink" href="Index.html">Início</a></div>
         <div class="menuitem"><a class="menulink" href="Resenhas.html">Resenhas</a></div>
         <div class="menuitem"><a class="menulink" href="Lista de Desejos.html">Lista de Desejos</a></div>
-        <div class="menuitem"><a class="menulink" href="Cadastro.html">Cadastro</a></div>
-        <div class="menuitem"><a class="menulink" href="Entrar.html">Entrar</a></div>
+        <div class="menuitem" id="cad" style="display: none"><a class="menulink" href="Cadastro.html">Cadastro</a></div>
+        <div class="menuitem" id="ent" style="display: none"><a class="menulink" href="Entrar.html">Entrar</a></div>
+        <div class="menuitem" id="ss" style="display: none"><a class="menulink" onclick="sair()">Sair</a></div>
     </div>
 
     <div class="Slidy">
@@ -31,7 +32,7 @@
         Livros favoritos!
     </div>
 
-    <div class="conteinerprodutos">
+    <div class="conteinerprodutos" id="cp" style="display: none">
 
         <div class="hvr-grow">
             <div class="caixaproduto">
@@ -83,7 +84,11 @@
         </div>
 
     </div>
+
+    <div id="mess" style="display: none">
+        Entre para ver seus livros favoritos!
     </div>
+
     <div class="rodape">
         <nav>
             <h2>Fique conectado !</h2>
@@ -100,7 +105,19 @@
         <small>Copyright © 2019 Lívia N. </small>
 
     </div>
-
+    <script src="js/geral.js"></script>
 </body>
 
 </html>
+
+<script>
+    if (sessionStorage.usuario_bandtec != undefined) {
+            cp.style.display = 'flex';
+        }
+
+        else {
+            mess.style.display = 'flex';
+        }
+
+</script>
+

@@ -17,8 +17,9 @@
                 <div class="menuitem"><a class="menulink" href="Index.html">Início</a></div>
                 <div class="menuitem"><a class="menulink" href="Resenhas.html">Resenhas</a></div>
                 <div class="menuitem"><a class="menulink" href="Lista de Desejos.html">Lista de Desejos</a></div>
-                <div class="menuitem"><a class="menulink" href="Cadastro.html">Cadastro</a></div>
-                <div class="menuitem"><a class="menulink" href="Entrar.html">Entrar</a></div>
+                <div class="menuitem" id="cad" style="display: none"><a class="menulink" href="Cadastro.html">Cadastro</a></div>
+                <div class="menuitem" id="ent" style="display: none"><a class="menulink" href="Entrar.html">Entrar</a></div>
+                <div class="menuitem" id="ss" style="display: none"><a class="menulink" onclick="sair()">Sair</a></div>
             </div>
         
             <form id="form_register" method="post" onsubmit="return entrar()">
@@ -38,7 +39,7 @@
             </form>
             
     
-  
+            <script src="js/geral.js"></script>
 
 </body>
 </html>

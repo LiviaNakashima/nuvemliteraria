@@ -39,7 +39,7 @@ a
     background-color: #8CCDC5;   
     height: 30px;
     width: 20px;
-    text-align: center;
+    text-align: center !important;
     flex: 1;
     margin-right:10px;
     margin-left:10px;

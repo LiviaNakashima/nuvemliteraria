@@ -26,7 +26,7 @@
     <div class="titulo">
         </div>
 
-    <div class="conteinerprodutos">
+    <div class="conteinerprodutos" id="cp" style="display:none">
 
         <div class="hvr-grow">
             <div class="caixaproduto">
@@ -106,5 +106,23 @@
                         </div>
 
     </div>
+
+    <div class="main" id="main" style="display: none"> 
+        <div class="cloud_base">
+            <span class="rounds" style="text-align: center">
+                    <a class="menulink2" href="Entrar.html"><b>ENTRE PARA VER AS RESENHAS</b></a>
+            </span>
+        </div>
+    </div>
     <script src="js/geral.js"></script>
 </body>
+<script>
+    if (sessionStorage.usuario_bandtec != undefined) {
+        cp.style.display = 'flex';
+    }
+
+    else {
+        main.style.display = 'flex';
+    }
+
+</script>

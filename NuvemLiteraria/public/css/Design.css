@@ -381,3 +381,341 @@ body {
     text-shadow: 0 1px 0;
 }
 
+/* Seção das Nuvens */
+
+/* body {
+    background: #fff;
+    padding: 0;
+    overflow: hidden;
+      height: 500px;
+    margin: 0;
+  } */
+  
+  .container {
+    width: 900px;
+    position: flex;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  /* Clouds */
+  #clouds {
+    top: 100px;
+    position: relative;
+    -webkit-animation: move 20s infinite linear;  
+    -moz-animation: move 20s infinite linear;  
+    -ms-animation: move 20s infinite linear;
+    z-index: 1;
+  }
+  
+  #clouds2 {
+    position: relative;
+    -webkit-animation: backup 14s infinite linear;
+    -moz-animation: backup 14s infinite linear;
+    -ms-animation: backup 14s infinite linear;
+    z-index: 2;
+  }
+  
+  .cloud1, .cloud2, .cloud3 { 
+    opacity: 1;  
+  }
+  
+  .cloud1 {
+    width: 200px;
+    height: 60px;
+    background: #00c9ee;
+    position: absolute;
+    top: 80px;
+    
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+    
+  }
+  
+  .cloud1:after {
+    content: '';
+    position: absolute;
+    background: #00c9ee;
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: 20px;
+    
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+  
+  }
+  
+  .cloud1:before {
+    content: '';
+    position: absolute;
+    background: #00c9ee;
+    width: 100px;
+    height: 100px;
+    top: -60px;
+    right: 30px;
+    
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+  }
+  
+  .cloud2 {
+    width: 100px;
+    height: 30px;
+    background: #00c9ee;
+    position: absolute;
+    top: 180px;
+    left: 400px;
+    
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+  }
+  
+  .cloud2:after {
+    content: '';
+    position: absolute;
+    background: #00c9ee;
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 10px;
+    
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+  }
+  
+  .cloud2:before {
+    content: '';
+    position: absolute;
+    background: #00c9ee;
+    width: 50px;
+    height: 50px;
+    top: -30px;
+    right: 15px;
+    
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+  
+  }
+  
+  .cloud3 {
+    width: 200px;
+    height: 60px;
+    background: #00c9ee;
+    position: absolute;
+    top: 100px;
+    left: 740px;
+    
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+  }
+  
+  .cloud3:after {
+    content: '';
+    position: absolute;
+    background: #00c9ee;
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: 20px;
+    
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+  }
+  
+  .cloud3:before {
+    content: '';
+    position: absolute;
+    background: #00c9ee;
+    width: 100px;
+    height: 100px;
+    top: -60px;
+    right: 30px;
+    
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+  }
+  
+  @-webkit-keyframes move {
+    0% {left: 0px;}
+    49% {left: 940px; opacity: 1;}
+    50% {left: 940px; opacity: 0;}
+    51% {left: -940px; opacity: 0;} 
+    52% {left: -940px; opacity: 1;} 
+    100% {left: 0px;} 
+  }
+  
+  @-webkit-keyframes backup {
+    0% {left: -940px;}
+    100% {left: 940px;}  
+  
+  }  
+  
+  @-moz-keyframes move {
+    0% {left: 0px;}
+    49% {left: 940px; opacity: 1;}
+    50% {left: 940px; opacity: 0;}
+    51% {left: -940px; opacity: 0;} 
+    52% {left: -940px; opacity: 1;} 
+    100% {left: 0px;} 
+  }
+  
+  @-moz-keyframes backup {
+    0% {left: -940px;}
+    100% {left: 940px;}  
+  
+  }  
+  
+  @-ms-keyframes move {
+    0% {left: 0px;}
+    49% {left: 940px; opacity: 1;}
+    50% {left: 940px; opacity: 0;}
+    51% {left: -940px; opacity: 0;} 
+    52% {left: -940px; opacity: 1;} 
+    100% {left: 0px;} 
+  }
+  
+  @-ms-keyframes backup {
+    0% {left: -940px;}
+    100% {left: 940px;}  
+  
+  }  
+  
+  #clouds .cloud1, #clouds .cloud2, #clouds .cloud2:after, #clouds .cloud2:before, #clouds .cloud3, #clouds .cloud1:after, #clouds .cloud1:before, #clouds .cloud3:before, #clouds .cloud3:after {
+      background: #00f1ee;
+      box-shadow: 0px 0px 20px 5px #00f1ee;	
+      -moz-box-shadow: 0px 0px 20px 5px #00f1ee;	
+      -webkit-box-shadow: 0px 0px 20px 5px #00f1ee;
+  }
+
+/* Seção Letras */
+
+body {
+	/* background: #7BD6FF; */
+	font-family: "Throw My Hands Up In The Air Bold";
+	font-size: 76%;
+    padding: 0 0 0px
+}
+
+/*
+	The idea is to make a base first.
+	After that, make 2 circles and place on the base.
+
+	Add some CSS3 box shadows for the awesomeness!
+*/
+
+.cloud_base {
+	background: white;
+	
+	height: 100px;
+	width: 300px;
+	
+	border-radius: 50px; /* half of height will do */
+	
+	position: relative;
+	top: 120px;
+	
+	box-shadow:
+		inset 5px -9px 5px rgba(225, 245, 253, 0.5),
+		0px 0px 10px 6px rgba(240, 240, 240, 0.7);
+	
+	/* for basic little animation */
+	-webkit-transition: 0.2s ease-in all;
+	-moz-transition: 0.2s ease-in all;
+	transition: 0.2s ease-in all;
+}
+
+.cloud_base:hover {
+	left: 55%;
+}
+
+.rounds {
+	width: 300px;
+	border-radius: 50%; /* circle */
+	position: absolute;
+	bottom: -30px;
+	
+	-webkit-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.2);
+	
+	-webkit-transition: 0.2s ease-in all;
+	-moz-transition: 0.2s ease-in all;
+	transition: 0.2s ease-in all;
+}
+
+.rounds:before, .rounds:after{
+	content: '';
+	position: absolute;
+	background: #fff;
+}
+
+.rounds:after{
+	height: 100px;
+	width: 100px;
+	border-radius: 50%; /* circle */
+	
+	top: -180px;
+	left: 170px;
+	
+	box-shadow:
+		inset 3px 2px 2px rgba(230, 230, 230, 0.5),
+		0px -10px 15px rgba(255, 255, 255, 0.4);
+}
+
+.rounds:before {
+	height: 180px;
+	width: 180px;
+	border-radius: 50%; /* circle */
+	
+	top: -220px;
+	left: 30px;
+	
+	box-shadow:
+		inset 2px 4px 2px rgba(230, 230, 230, 0.5),
+		0px -10px 15px rgba(255, 255, 255, 0.4);
+}
+
+/*
+	Code related to steps just for the demo.
+	Not Important.
+*/
+
+.steps {
+	width: 100%;
+	position: relative;
+	height: 200px;
+}
+.steps .cloud_base {
+	top: 20px;
+}
+.steps .rounds {
+	text-align: center;
+}
+.steps.two {
+	margin-top: 30px;
+}
+.steps > div, .steps > span, .main > div {
+	left: 45%;
+	margin-left: -75px;
+}
+
+h2 {
+	color: black;
+	text-align: center;
+	font-size: 1.8em;
+}
+
+.main {
+	height: 350px;
+}

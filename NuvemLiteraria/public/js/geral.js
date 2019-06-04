@@ -17,3 +17,8 @@ function sair()
     sessionStorage.clear();
     window.location.href = 'Index.html';
 }
+
+function open()
+{
+    location.href = "Cadastro.html";
+}

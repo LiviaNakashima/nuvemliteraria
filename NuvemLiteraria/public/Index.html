@@ -10,7 +10,8 @@
 <body>
 
     <div class="logo">
-        <img src="images/favicon.png" height="54px" width="56px"><a href="Index.html">Nuvem Literária</a><img src="images/favicon.png" height="54px" width="56px">
+        <img src="images/favicon.png" height="54px" width="56px"><a href="Index.html">Nuvem Literária</a><img
+            src="images/favicon.png" height="54px" width="56px">
     </div>
 
     <div class="menu">
@@ -85,9 +86,14 @@
 
     </div>
 
-    <div id="mess" style="display: none">
-        Entre para ver seus livros favoritos!
+    <div class="main" id="main" style="display: none" onclick="open()"> 
+        <div class="cloud_base">
+            <span class="rounds" style="text-align: center">
+                    Veja seus livros favoritos
+            </span>
+        </div>
     </div>
+
 
     <div class="rodape">
         <nav>
@@ -112,12 +118,11 @@
 
 <script>
     if (sessionStorage.usuario_bandtec != undefined) {
-            cp.style.display = 'flex';
-        }
+        cp.style.display = 'flex';
+    }
 
-        else {
-            mess.style.display = 'flex';
-        }
+    else {
+        main.style.display = 'flex';
+    }
 
 </script>
-

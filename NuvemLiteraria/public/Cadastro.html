@@ -42,6 +42,7 @@
             <input type="password" name="senha" placeholder="Digite sua senha" required> <br>
             <input type="button" name="prev" class="prev acao" value="Anterior">
             <input type="submit" name="next" class="acao" value="Cadastrar">
+            <img src="images/aguarde.gif" id="img_aguarde" style="display: none;" width="50px">
         </fieldset>
             
     </form>
@@ -85,6 +86,10 @@
 
         return false;
     }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display='block'; }
 </script>
 
 </html>

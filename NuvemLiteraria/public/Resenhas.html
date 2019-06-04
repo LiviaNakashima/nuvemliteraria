@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="css/Design.css" type="text/css">
     <meta charset="utf-8">
-    <title>Nuvem Literária</title>
+    <title>Resenhas</title>
     <link rel="shortcut icon" href="images/favicon.png">
 </head>
 
@@ -23,17 +23,10 @@
         <div class="menuitem" id="ss" style="display: none"><a class="menulink" onclick="sair()">Sair</a></div>
     </div>
 
-    <div class="Slidy">
-        <div class="Slide UM">
-            <img src="images/imgboxofc.jpg" height="310px" width="540px">
+    <div class="titulo">
         </div>
 
-    </div>
-    <div class="titulo">
-        Livros favoritos!
-    </div>
-
-    <div class="conteinerprodutos" id="cp" style="display: none">
+    <div class="conteinerprodutos">
 
         <div class="hvr-grow">
             <div class="caixaproduto">
@@ -84,45 +77,34 @@
             </div>
         </div>
 
-    </div>
+        <div class="hvr-grow">
+                <div class="caixaproduto">
+                    <a href="APPC.html"><img src="images/APPC.jpg" height="200px" width="220px"></a>
+                    <div class="nome">9ª Posição</div>
+                </div>
+            </div>
 
-    <div class="main" id="main" style="display: none"> 
-        <div class="cloud_base">
-            <span class="rounds" style="text-align: center">
-                    <a class="menulink2" href="Entrar.html">Veja seus livros favoritos</a>
-            </span>
-        </div>
-    </div>
+            <div class="hvr-grow">
+                    <div class="caixaproduto">
+                        <a href="APPC.html"><img src="images/APPC.jpg" height="200px" width="220px"></a>
+                        <div class="nome">10ª Posição</div>
+                    </div>
+                </div>
 
+                <div class="hvr-grow">
+                        <div class="caixaproduto">
+                            <a href="APPC.html"><img src="images/APPC.jpg" height="200px" width="220px"></a>
+                            <div class="nome">11ª Posição</div>
+                        </div>
+                    </div>
 
-    <div class="rodape">
-        <nav>
-            <h2>Fique conectado !</h2>
-
-
-            <a href="#">Gmail</a>
-
-            <a href="#">Twitter</a>
-
-            <a href="#">Facebook</a>
-
-
-        </nav> <br>
-        <small>Copyright © 2019 Lívia N. </small>
+                    <div class="hvr-grow">
+                            <div class="caixaproduto">
+                                <a href="APPC.html"><img src="images/APPC.jpg" height="200px" width="220px"></a>
+                                <div class="nome">12ª Posição</div>
+                            </div>
+                        </div>
 
     </div>
     <script src="js/geral.js"></script>
 </body>
-
-</html>
-
-<script>
-    if (sessionStorage.usuario_bandtec != undefined) {
-        cp.style.display = 'flex';
-    }
-
-    else {
-        main.style.display = 'flex';
-    }
-
-</script>

@@ -29,7 +29,11 @@
                             <input type="text" name="autor" placeholder="Digite o nome do autor" required>
                             <input type="text" name="editora" placeholder="Digite o nome da editora">
                             <input type="text" name="genero" placeholder="Digite o gênero do livro"><br>
-                            <input type="submit" name="next" class="acao" value="Cadastrar">
+                            <button id="btn_reg" class="acao">Cadastrar</button>
+                            <img src="images/aguarde.gif" id="img_aguarde" style="display:none" width="50px">
+                            <div id="div_erro" style="display: none">
+                                    Cadastro inválido!
+                                </div>
                         </fieldset>
 
             </form>
@@ -52,24 +56,37 @@
 </html>
 <script>
         function registrar() {
-    
+            aguardar();
             var formulario = new URLSearchParams(new FormData(form_register));
             fetch("/usuarios/registrar", {
                 method: "POST",
                 body: formulario
             }).then(function (response) {
-                if (response.ok) {
-    
-                    alert('Cadastrado com sucesso');
-                    window.location.href = "Livros Cadastrados.html"
-                } else {
-    
-                    alert('Erro de cadastro!');
-                
-                }
-    
-            });
-    
-            return false;
-        }
+            if (response.ok) {
+
+                alert('Cadastrado com sucesso');
+                window.location.href = "Livros Cadastrados.html"
+            } else {
+
+                console.log('Erro de cadastro!');
+                finalizar_aguardar();
+            
+            }
+
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_reg.disabled = true;
+        img_aguarde.style.display='block';
+        div_erro.style.display='none';
+    }
+
+    function finalizar_aguardar() {
+        btn_reg.disabled = false;
+        img_aguarde.style.display='none';
+        div_erro.style.display='block';
+    }
     </script>

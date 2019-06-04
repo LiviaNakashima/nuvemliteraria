@@ -41,8 +41,11 @@
             <input type="text" name="email" placeholder="Digite seu email" required> <br>
             <input type="password" name="senha" placeholder="Digite sua senha" required> <br>
             <input type="button" name="prev" class="prev acao" value="Anterior">
-            <input type="submit" name="next" class="acao" value="Cadastrar">
-            <img src="images/aguarde.gif" id="img_aguarde" style="display: none;" width="50px">
+            <button id="btn_cad" class="acao">Cadastrar</button>
+            <img src="images/aguarde.gif" id="img_aguarde" style="display:none" width="50px">
+            <div id="div_erro" style="display: none">
+                    Cadastro inválido!
+                </div>
         </fieldset>
             
     </form>
@@ -66,7 +69,7 @@
 </body>
 <script>
     function cadastrar() {
-
+        aguardar();
         var formulario = new URLSearchParams(new FormData(form_register));
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -78,7 +81,8 @@
                 window.location.href = "Entrar.html"
             } else {
 
-                alert('Erro de cadastro!');
+                console.log('Erro de cadastro!');
+                finalizar_aguardar();
             
             }
 
@@ -88,8 +92,16 @@
     }
 
     function aguardar() {
-        btn_entrar.disabled = true;
-        img_aguarde.style.display='block'; }
+        btn_cad.disabled = true;
+        img_aguarde.style.display='block';
+        div_erro.style.display='none';
+    }
+
+    function finalizar_aguardar() {
+        btn_cad.disabled = false;
+        img_aguarde.style.display='none';
+        div_erro.style.display='block';
+    }
 </script>
 
 </html>

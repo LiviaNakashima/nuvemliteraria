@@ -9,10 +9,12 @@ router.get('/ultimas', function (req, res, next) {
   banco.conectar().then(() => {
     var limite_linhas = 8;
     return banco.sql.query(`select top ${limite_linhas} 
-                            temperatura, 
-                            umidade, 
-                            FORMAT(momento,'HH:mm:ss') as momento 
-                            from leitura order by id desc`);
+                            NomeLivro as livro, 
+                            AutorLivro as autor, 
+                            EditoraLivro as editora,
+                            GeneroLivro as genero,
+                            LinkLivro as link
+                            from Livros order by NomeLivro`);
   }).then(consulta => {
 
     console.log(`Resultado da consulta: ${JSON.stringify(consulta.recordset)}`);
@@ -31,7 +33,7 @@ router.get('/ultimas', function (req, res, next) {
 });
 
 
-router.get('/estatisticas', function (req, res, next) {
+router.get('/livros', function (req, res, next) {
   console.log(banco.conexao);
 
   var estatisticas = {
@@ -43,10 +45,12 @@ router.get('/estatisticas', function (req, res, next) {
   banco.conectar().then(() => {
     return banco.sql.query(`
         select 
-          max(temperatura) as temp_maxima, 
-          min(temperatura) as temp_minima, 
-          avg(temperatura) as temp_media 
-        from leitura
+          NomeLivro as livro, 
+          AutorLivro as autor, 
+          EditoraLivro as editora,
+          GeneroLivro as genero,
+          LinkLivro as link 
+        from Livros
         `);
   }).then(consulta => {
     estatisticas.temp_maxima = consulta.recordset[0].temp_maxima;

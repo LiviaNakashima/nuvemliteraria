@@ -100,6 +100,7 @@ router.post('/registrar', function (req, res, next) {
   var autor;
   var editora;
   var genero;
+  var link;
   var cadastro_valido = false;
 
   banco.conectar().then(() => {
@@ -108,10 +109,11 @@ router.post('/registrar', function (req, res, next) {
     autor = req.body.autor; // depois de .body, use o nome (name) do campo em seu formulário de login
     editora = req.body.editora; // depois de .body, use o nome (name) do campo em seu formulário de login
     genero = req.body.genero;
+    link = req.body.link;
  
-    if (livro == undefined || autor == undefined || editora == undefined || genero == undefined) {
+    if (livro == undefined || autor == undefined || editora == undefined || genero == undefined || link == undefined) {
 	  // coloque a frase de erro que quiser aqui. Ela vai aparecer no formulário de cadastro
-      throw new Error(`Dados de cadastro não chegaram completos: ${livro} / ${autor} / ${editora}/ ${genero}`);
+      throw new Error(`Dados de cadastro não chegaram completos: ${livro} / ${autor} / ${editora}/ ${genero}/ ${link}`);
     }
     return banco.sql.query(`select count(*) as contagem from Livros where NomeLivro = '${livro}'`);
   }).then(consulta => {
@@ -133,7 +135,7 @@ router.post('/registrar', function (req, res, next) {
   }).finally(() => {
 	  if (cadastro_valido) {		  
 			  
-		banco.sql.query(`insert into Livros (NomeLivro, AutorLivro, EditoraLivro, GeneroLivro) values ('${livro}','${autor}','${editora}', '${genero}')`).then(function() {
+		banco.sql.query(`insert into Livros (NomeLivro, AutorLivro, EditoraLivro, GeneroLivro) values ('${livro}','${autor}','${editora}', '${genero}', '${link}')`).then(function() {
 			console.log(`Cadastro criado com sucesso!`);
 			res.sendStatus(201); 
 			// status 201 significa que algo foi criado no back-end, 

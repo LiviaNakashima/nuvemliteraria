@@ -22,13 +22,14 @@
                 <div class="menuitem" id="ss" style="display: none"><a class="menulink" onclick="sair()">Sair</a></div>
             </div>
         
-            <form id="form_register" onsubmit="return registrar()">
+            <form id="form_register" onsubmit="return registrar()" style="display: none">
                     <fieldset>
                             <h2>Dados do livro</h2>
                             <input type="text" name="livro" placeholder="Digite o nome do livro" required>
                             <input type="text" name="autor" placeholder="Digite o nome do autor" required>
                             <input type="text" name="editora" placeholder="Digite o nome da editora">
-                            <input type="text" name="genero" placeholder="Digite o gênero do livro"><br>
+                            <input type="text" name="genero" placeholder="Digite o gênero do livro">
+                            <input type="text" name="link" placeholder="Digite o link para a capa do livro"><br>
                             <button id="btn_reg" class="acao">Cadastrar</button>
                             <img src="images/aguarde.gif" id="img_aguarde" style="display:none" width="50px">
                             <div id="div_erro" style="display: none">
@@ -39,7 +40,7 @@
             </form>
             <script src="js/geral.js"></script>
 
-            <div class="container">
+            <div class="container" id="gif" style="display: none">
                 <div id="clouds">
                   <div class="cloud1"></div>
                   <div class="cloud2"></div>
@@ -52,6 +53,14 @@
                 </div>
               
               </div>
+
+              <div class="main" id="main" style="display: none"> 
+                <div class="cloud_base">
+                    <span class="rounds" style="text-align: center">
+                            <a class="menulink2" href="Entrar.html"><b>ENTRE PARA VER A LISTA DE DESEJO</b></a>
+                    </span>
+                </div>
+            </div>
 </body>
 </html>
 <script>
@@ -89,4 +98,15 @@
         img_aguarde.style.display='none';
         div_erro.style.display='block';
     }
+    </script>
+    <script>
+if (sessionStorage.usuario_bandtec != undefined) {
+        form_register.style.display = 'flex';
+        gif.style.display = 'flex';
+    }
+
+    else {
+        main.style.display = 'flex';
+    }
+    
     </script>

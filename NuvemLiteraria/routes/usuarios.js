@@ -135,7 +135,7 @@ router.post('/registrar', function (req, res, next) {
   }).finally(() => {
 	  if (cadastro_valido) {		  
 			  
-		banco.sql.query(`insert into Livros (NomeLivro, AutorLivro, EditoraLivro, GeneroLivro) values ('${livro}','${autor}','${editora}', '${genero}', '${link}')`).then(function() {
+		banco.sql.query(`insert into Livros (NomeLivro, AutorLivro, EditoraLivro, GeneroLivro, LinkLivro) values ('${livro}','${autor}','${editora}', '${genero}', '${link}')`).then(function() {
 			console.log(`Cadastro criado com sucesso!`);
 			res.sendStatus(201); 
 			// status 201 significa que algo foi criado no back-end, 

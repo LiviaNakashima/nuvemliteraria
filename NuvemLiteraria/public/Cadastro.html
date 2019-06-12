@@ -44,9 +44,6 @@
             <button type="button" name="prev" class="prev acao">Anterior</button>
             <button id="btn_cad" class="acao">Cadastrar</button>
             <img src="images/aguarde.gif" id="img_aguarde" style="display:none" width="50px">
-            <div id="div_erro" style="display: none">
-                    Cadastro inválido!
-                </div>
         </fieldset>
             
     </form>
@@ -68,6 +65,12 @@
       
       </div>
 </body>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+</html>
+
 <script>
     function cadastrar() {
         aguardar();
@@ -109,14 +112,12 @@
     function aguardar() {
         btn_cad.disabled = true;
         img_aguarde.style.display='block';
-        div_erro.style.display='none';
     }
 
     function finalizar_aguardar() {
         btn_cad.disabled = false;
         img_aguarde.style.display='none';
-        div_erro.style.display='block';
     }
 </script>
 
-</html>
+

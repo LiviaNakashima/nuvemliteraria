@@ -30,6 +30,7 @@
                     <input type="password" name="senha" placeholder="Digite sua senha" required><br>
                     <button id="btn_entrar" class="acao">Entrar</button>
                     <img src="images/aguarde.gif" id="img_aguarde" style="display: none;" width="50px">
+
                 </fieldset>
 
             </form>
@@ -79,7 +80,7 @@
                     sessionStorage.usuario_bandtec = resposta.nome;
                     Swal.fire({
                         title: "Sucesso",
-                        text: "Login foi realizado com sucesso!",
+                        text: "Login realizado com sucesso!",
                         type: "success"
                     }).then(willDelete => {
                         window.location.href = 'Index.html';
@@ -105,13 +106,11 @@
     function aguardar() {
         btn_entrar.disabled = true;
         img_aguarde.style.display = 'block';
-        div_erro.style.display = 'none';
     }
 
     function finalizar_aguardar() {
         btn_entrar.disabled = false;
         img_aguarde.style.display = 'none';
-        div_erro.style.display = 'block';
     }
 
 </script>

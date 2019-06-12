@@ -63,6 +63,10 @@
                 </div>
             </div>
 </body>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 </html>
 <script>
         function registrar() {
@@ -74,12 +78,25 @@
             }).then(function (response) {
             if (response.ok) {
 
-                alert('Cadastrado com sucesso');
-                window.location.href = "Livros Cadastrados.html"
+                Swal.fire({
+                        title: "Sucesso",
+                        text: "Livro cadastrado com sucesso!",
+                        type: "success"
+                    }).then(willDelete => {
+                        window.location.href = 'Livros Cadastrados.html';
+
+                    });
             } else {
 
                 console.log('Erro de cadastro!');
                 finalizar_aguardar();
+
+                Swal.fire({
+                    title: "Erro",
+                    text: "Cadastro inválido",
+                    type: "error",
+
+                });
             
             }
 

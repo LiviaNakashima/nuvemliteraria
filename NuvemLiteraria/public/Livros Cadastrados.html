@@ -17,6 +17,7 @@
     <div class="menu">
         <div class="menuitem"><a class="menulink" href="Index.html">Início</a></div>
         <div class="menuitem"><a class="menulink" href="Resenhas.html">Resenhas</a></div>
+        <div class="menuitem"><a class="menulink" href="Livros Cadastrados.html">Livros Cadastrados</a></div>
         <div class="menuitem" ><a class="menulink" href="Lista de Desejos.html">Lista de Desejos</a></div>
         <div class="menuitem" id="cad" style="display: none"><a class="menulink" href="Cadastro.html">Cadastro</a></div>
         <div class="menuitem" id="ent" style="display: none"><a class="menulink" href="Entrar.html">Entrar</a></div>
@@ -25,12 +26,34 @@
 
     </div>
     <div class="titulo">
-        Sua lista de desejos
+        Livros já cadastrados!
     </div>
 
-    <div class="conteinerprodutos" id="resultados"></div>
+    <div class="conteinerprodutos" id="resultados" style="display:none"></div>
 
     <script src="js/geral.js"></script>
+
+    <div class="container" id="gif" style="display: none">
+        <div id="clouds">
+          <div class="cloud1"></div>
+          <div class="cloud2"></div>
+          <div class="cloud3"></div>
+        </div>
+        <div id="clouds2">
+          <div class="cloud1"></div>
+          <div class="cloud2"></div>
+          <div class="cloud3"></div>
+        </div>
+      
+      </div>
+
+      <div class="main" id="main" style="display: none"> 
+        <div class="cloud_base">
+            <span class="rounds" style="text-align: center">
+                    <a class="menulink2" href="Entrar.html"><b>ENTRE PARA VER A LISTA DE CADASTRADOS</b></a>
+            </span>
+        </div>
+    </div>
     </body>
     <script>
     fetch('/leituras/ultimas', { cache: 'no-store' }).then(function (response) {
@@ -51,7 +74,6 @@
                                                 </div>`;
                    }
 
-                    // div_aguarde.style.display = 'none';
 
                    
                 });
@@ -63,5 +85,13 @@
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
 
+            if (sessionStorage.usuario_bandtec != undefined) {
+        resultado.style.display = 'flex';
+        gif.style.display = 'flex';
+    }
+
+    else {
+        main.style.display = 'flex';
+    }
     
     </script>

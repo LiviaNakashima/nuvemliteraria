@@ -16,6 +16,7 @@
             <div class="menu">
                 <div class="menuitem"><a class="menulink" href="Index.html">Início</a></div>
                 <div class="menuitem"><a class="menulink" href="Resenhas.html">Resenhas</a></div>
+                <div class="menuitem"><a class="menulink" href="Livros Cadastrados.html">Livros Cadastrados</a></div>
                 <div class="menuitem"><a class="menulink" href="Lista de Desejos.html">Lista de Desejos</a></div>
                 <div class="menuitem" id="cad" style="display: none"><a class="menulink" href="Cadastro.html">Cadastro</a></div>
                 <div class="menuitem" id="ent" style="display: none"><a class="menulink" href="Entrar.html">Entrar</a></div>
@@ -54,6 +55,10 @@
               
               </div>
 </body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
 </html>
 
 <script>
@@ -71,35 +76,47 @@
             method: "POST",
             body: formulario
         }).then(function (response) {
-            
+
             if (response.ok) {
 
                 response.json().then(function (resposta) {
 
                     sessionStorage.usuario_bandtec = resposta.nome;
+                    Swal.fire({
+                        title: "Sucesso",
+                        text: "Login foi realizado com sucesso!",
+                        type: "success"
+                    }).then(willDelete => {
+                        window.location.href = 'Index.html';
 
-                    window.location.href = 'Index.html';
+                    });
+
                 });
             } else {
 
                 console.log('Erro de login!');
                 finalizar_aguardar();
+
+                Swal.fire({
+                    title: "Erro",
+                    text: "Email ou senha inválidos",
+                    type: "error",
+
+                });
             }
         });
-
         return false;
     }
-
     function aguardar() {
         btn_entrar.disabled = true;
-        img_aguarde.style.display='block';
-        div_erro.style.display='none';
+        img_aguarde.style.display = 'block';
+        div_erro.style.display = 'none';
     }
 
     function finalizar_aguardar() {
         btn_entrar.disabled = false;
-        img_aguarde.style.display='none';
-        div_erro.style.display='block';
+        img_aguarde.style.display = 'none';
+        div_erro.style.display = 'block';
     }
 
 </script>

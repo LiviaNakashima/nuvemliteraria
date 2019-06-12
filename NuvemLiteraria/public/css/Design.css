@@ -417,7 +417,7 @@ body {
   } */
   
   .container {
-    width: 900px;
+    max-width: 100vw;
     position: flex;
     height: 400px;
     overflow: hidden;

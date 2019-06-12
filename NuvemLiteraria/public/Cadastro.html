@@ -78,12 +78,26 @@
         }).then(function (response) {
             if (response.ok) {
 
-                alert('Cadastrado com sucesso');
-                window.location.href = "Entrar.html"
+                Swal.fire({
+                        title: "Sucesso",
+                        text: "Cadastro realizado com sucesso!",
+                        type: "success"
+                    }).then(willDelete => {
+                        window.location.href = 'Entrar.html';
+
+                    });
+             
             } else {
 
                 console.log('Erro de cadastro!');
                 finalizar_aguardar();
+
+                Swal.fire({
+                    title: "Erro",
+                    text: "Cadastro inválido",
+                    type: "error",
+
+                });
             
             }
 
